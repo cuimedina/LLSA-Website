@@ -56,14 +56,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           {/* Logo / Brand */}
-          <div className="flex-shrink-0 flex items-center space-x-3">
-            {/* Mini Icon */}
-             <svg width="24" height="16" viewBox="0 0 140 90" fill="currentColor" className={`${isScrolled ? 'text-black' : 'text-white'}`}>
-                <path d="M70 78 C70 78 65 60 70 50 C75 60 70 78 70 78 Z" />
-                <path d="M70 45 C70 45 62 25 70 10 C78 25 70 45 70 45 Z" />
-                <path d="M50 48 C50 48 40 28 35 15 C45 30 50 48 50 48 Z" transform="rotate(-20 50 48)" />
-                <path d="M90 48 C90 48 100 28 105 15 C95 30 90 48 90 48 Z" transform="rotate(20 90 48)" />
-             </svg>
+          <div className="flex-shrink-0 flex items-center space-x-4">
+            {/* Logo Image */}
+            <img 
+              src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/LLSA_logo.PNG"
+              alt="LLSA Logo"
+              className={`h-12 w-auto object-contain transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert'}`}
+            />
             <a 
               href="#" 
               onClick={(e) => {
