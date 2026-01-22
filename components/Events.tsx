@@ -25,7 +25,7 @@ const Events: React.FC = () => {
             <div className="lg:w-1/2 relative min-h-[400px] md:min-h-[500px] overflow-hidden bg-gray-100">
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <img 
-                src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/HNBALLSAStudentMixer.jpg" 
+                src="./HNBALLSAStudentMixer.jpg" 
                 alt="LLSA Bay Area Mixer Flyer" 
                 className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
               />

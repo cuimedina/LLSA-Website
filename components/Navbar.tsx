@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
           {/* Logo / Brand */}
           <div className="flex-shrink-0 flex items-center space-x-4">
             <img 
-              src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/LLSAWhiteLogo.png"
+              src="./LLSAWhiteLogo.png"
               alt="LLSA Logo"
               className={`h-12 w-auto object-contain transition-all duration-300 ${isScrolled ? 'brightness-0' : ''}`}
             />
