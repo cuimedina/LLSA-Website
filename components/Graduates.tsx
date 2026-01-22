@@ -101,6 +101,83 @@ const graduatesData: Graduate[] = [
     bio: 'Mateo is passionate about worker rights and fair wages. He previously worked in labor relations and is now specializing in union representation.',
     currentPosition: 'Labor Relations Intern',
     linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '9',
+    firstName: 'Julian',
+    lastName: 'Ortega',
+    graduationYear: '2025',
+    image: '',
+    concentration: 'Litigation',
+    bio: 'Julian is an aspiring litigator with a focus on consumer protection. He participated in the honors mock trial program and serves as an editor for the Law Review.',
+    currentPosition: 'Legal Extern',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '10',
+    firstName: 'Rosa',
+    lastName: 'Mendoza',
+    graduationYear: '2024',
+    image: '',
+    concentration: 'Public Interest',
+    bio: 'Rosa is dedicated to serving underrepresented communities. She spent her summers working with legal aid societies and hopes to reform housing policy in Sacramento.',
+    currentPosition: 'Housing Rights Advocate',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '11',
+    firstName: 'Fernando',
+    lastName: 'Ramirez',
+    graduationYear: '2026',
+    image: '',
+    concentration: 'Tax Law',
+    bio: 'Fernando is exploring the complex world of tax law and its impact on small businesses. He enjoys volunteering at tax clinics and helping families navigate financial regulations.',
+    currentPosition: 'VITA Volunteer',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '12',
+    firstName: 'Lucia',
+    lastName: 'Blanco',
+    graduationYear: '2025',
+    image: '',
+    concentration: 'Human Rights',
+    bio: 'Lucia has a deep commitment to international human rights. She has interned with global NGOs and plans to work on international asylum cases after graduation.',
+    currentPosition: 'International Law Fellow',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '13',
+    firstName: 'Ricardo',
+    lastName: 'Mendez',
+    graduationYear: '2024',
+    image: '',
+    concentration: 'Real Estate Law',
+    bio: 'Ricardo is interested in urban development and sustainable housing. He has a background in architecture and aims to bridge the gap between design and legal compliance.',
+    currentPosition: 'Real Estate Associate',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '14',
+    firstName: 'Valentina',
+    lastName: 'Ruiz',
+    graduationYear: '2026',
+    image: '',
+    concentration: 'Sports Law',
+    bio: 'Valentina is pursuing her dream of working in sports management and law. She is active in the Entertainment and Sports Law Society and has secured a summer internship with a professional league.',
+    currentPosition: 'Sports Legal Intern',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    id: '15',
+    firstName: 'Andres',
+    lastName: 'Navarro',
+    graduationYear: '2025',
+    image: '',
+    concentration: 'Constitutional Law',
+    bio: 'Andres is a scholar of constitutional theory. He aims to clerk for the appellate court and eventually teach law. He currently serves as a research assistant for constitutional history.',
+    currentPosition: 'Graduate Research Assistant',
+    linkedInUrl: 'https://linkedin.com'
   }
 ];
 
