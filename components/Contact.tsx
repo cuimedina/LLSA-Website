@@ -45,10 +45,20 @@ const Contact: React.FC = () => {
             <div className="mt-12">
               <h4 className="font-bold text-lg mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <a href="#" className="p-3 border border-gray-200 hover:border-black hover:bg-black hover:text-white transition-all duration-300">
+                <a 
+                  href="https://www.instagram.com/mcg_llsa/?hl=en" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 border border-gray-200 hover:border-black hover:bg-black hover:text-white transition-all duration-300"
+                >
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="p-3 border border-gray-200 hover:border-black hover:bg-black hover:text-white transition-all duration-300">
+                <a 
+                  href="https://www.linkedin.com/groups/14525631/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 border border-gray-200 hover:border-black hover:bg-black hover:text-white transition-all duration-300"
+                >
                   <Linkedin className="w-6 h-6" />
                 </a>
               </div>

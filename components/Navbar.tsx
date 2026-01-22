@@ -43,6 +43,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Mission', href: '#mission' },
     { name: 'Events', href: '#events' },
+    { name: 'Graduates', href: '#graduates' },
     { name: 'Donate', href: '#donate' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -58,11 +59,12 @@ const Navbar: React.FC = () => {
           {/* Logo / Brand */}
           <div className="flex-shrink-0 flex items-center space-x-4">
             {/* Logo Image */}
-            <img 
-              src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/LLSA_logo.PNG"
-              alt="LLSA Logo"
-              className={`h-12 w-auto object-contain transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert'}`}
-            />
+            {/* Logo Image */}
+<img 
+  src="https://github.com/cuimedina/LLSA-Website/blob/main/LLSAWhiteLogo.png?raw=true"
+  alt="LLSA Logo"
+  className="h-12 w-auto object-contain transition-all duration-300"
+/>
             <a 
               href="#" 
               onClick={(e) => {

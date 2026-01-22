@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
            {/* Logo Image - Main Hero Element */}
            <div className="mb-12 mx-auto transition-all duration-500 transform hover:scale-105">
              <img 
-               src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/LLSA_logo.PNG" 
+               src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/LLSAWhiteLogo.png" 
                alt="Latinx Law Students Association Logo" 
                className="w-64 sm:w-80 md:w-96 lg:w-[32rem] h-auto object-contain mx-auto opacity-95 hover:opacity-100 brightness-0 invert filter drop-shadow-2xl"
              />
