@@ -21,13 +21,13 @@ const Events: React.FC = () => {
         <div className="mb-20">
           <div className="bg-white shadow-xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row group">
             
-            {/* Image Side */}
-            <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden bg-gray-100">
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500 z-10"></div>
+            {/* Image Side - Restored sleek full-bleed look */}
+            <div className="lg:w-1/2 relative min-h-[400px] md:min-h-[500px] overflow-hidden bg-gray-100">
+              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <img 
-                src="HNBALLSAStudentMixer.jpg" 
+                src="https://raw.githubusercontent.com/cuimedina/LLSA-Website/main/HNBALLSAStudentMixer.jpg" 
                 alt="LLSA Bay Area Mixer Flyer" 
-                className="absolute inset-0 w-full h-full object-cover object-bottom transform group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-6 left-6 z-20 bg-black text-white px-4 py-2">
                 <span className="text-xs font-bold uppercase tracking-[0.2em]">Featured Event</span>
@@ -100,17 +100,20 @@ const Events: React.FC = () => {
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold">In Partnership With</p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "McGeorge LLSA",
-                    "HNBA Region XVII", 
-                    "Stanford LSA", 
-                    "UC Law SF", 
-                    "USF LLSA", 
-                    "UC Berkeley La Alianza", 
-                    "Santa Clara", 
-                    "UC Davis (King Hall)",
-                    "Lincoln Law"
+                    "HNBA Region XVII",
+                    "USF LLSA",
+                    "UC Law SF LLSA",
+                    "UC Berkeley La Alianza",
+                    "UC Davis King Hall Lalsa",
+                    "Stanford LLSA",
+                    "Santa Clara Law LLSA",
+                    "Lincoln Law LLSA",
+                    "McGeorge LLSA"
                   ].map((partner, i) => (
-                    <span key={i} className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full border border-gray-200">
+                    <span 
+                      key={i} 
+                      className="inline-block px-4 py-2 text-xs font-semibold rounded-full border bg-gray-50 text-gray-700 border-gray-200 shadow-sm"
+                    >
                       {partner}
                     </span>
                   ))}
@@ -122,7 +125,6 @@ const Events: React.FC = () => {
 
         {/* Regular Event Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Event Card 1 */}
           <div className="bg-white p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-4 border-black">
             <div className="flex items-center justify-between mb-6">
               <Users className="w-8 h-8 text-gray-800" />
@@ -137,7 +139,6 @@ const Events: React.FC = () => {
             </div>
           </div>
 
-          {/* Event Card 2 */}
           <div className="bg-white p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-4 border-black">
             <div className="flex items-center justify-between mb-6">
               <Mic2 className="w-8 h-8 text-gray-800" />
@@ -152,7 +153,6 @@ const Events: React.FC = () => {
             </div>
           </div>
 
-           {/* Event Card 3 */}
            <div className="bg-white p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-4 border-black">
             <div className="flex items-center justify-between mb-6">
               <Calendar className="w-8 h-8 text-gray-800" />
