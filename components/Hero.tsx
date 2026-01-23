@@ -1,46 +1,44 @@
 import React from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white">
-      {/* Dark Background Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-zinc-900 to-black"></div>
-      
-      {/* Subtle Pattern/Ambient Light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[100px] z-0"></div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center pt-12 md:pt-20">
-        <div className="animate-fade-in-up">
+      {/* Content Overlay - Pure black background as requested */}
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center animate-fade-in-up">
+        {/* Logo centered without any background boxes or containers */}
+        <div className="mb-10 md:mb-12">
           <img 
             src="https://storage.googleapis.com/llsa-website-images/LLSALogo.png" 
             alt="LLSA Logo" 
-            className="w-56 md:w-[320px] lg:w-[380px] h-auto object-contain mx-auto mb-6 md:mb-8 drop-shadow-2xl"
+            className="w-[280px] md:w-[400px] h-auto object-contain mx-auto"
           />
-          
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-2 md:mb-4">
-            LLSA
-          </h1>
-          
-          <p className="text-[10px] md:text-xs font-sans font-semibold tracking-label uppercase text-white/50 mb-6">
-            University of the Pacific • McGeorge School of Law
-          </p>
-          
-          <div className="w-12 h-px bg-white/20 mx-auto mb-6"></div>
-          
-          <p className="text-lg md:text-2xl font-sans font-normal text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 italic">
-            The next generation of legal leaders para la comunidad desde McGeorge School of Law
-          </p>
-
-          <div className="flex justify-center">
-            <a 
-              href="#mission"
-              className="px-12 py-3 md:py-4 border border-white/20 text-white text-[10px] uppercase tracking-label font-bold hover:bg-white hover:text-black hover:border-white transition-all duration-500 font-sans"
-            >
-              Learn More
-            </a>
-          </div>
         </div>
+        
+        {/* Tagline in white */}
+        <h2 className="text-white text-base md:text-xl font-medium tracking-editorial mb-4">
+          University of the Pacific • McGeorge School of Law
+        </h2>
+        
+        {/* Subtitle in lighter gray (#A1A1A1) */}
+        <p className="text-[#A1A1A1] text-sm md:text-base lg:text-lg font-sans font-light max-w-2xl mx-auto leading-relaxed">
+          Advancing academic success, professional excellence, and cultural awareness at McGeorge School of Law
+        </p>
+
+        {/* Action Button moved slightly closer */}
+        <div className="mt-12">
+          <a 
+            href="#mission"
+            className="px-10 py-4 border border-white/20 text-white text-[11px] uppercase tracking-label font-bold hover:bg-white hover:text-black transition-all duration-500"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      {/* Subtle white scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+        <ChevronDown size={28} strokeWidth={1} />
       </div>
     </section>
   );

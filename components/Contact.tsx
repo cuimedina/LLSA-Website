@@ -3,34 +3,34 @@ import { Mail, MapPin, Instagram, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32">
+    <section id="contact" className="py-24 md:py-32 bg-llsa-gray text-llsa-charcoal border-t border-gray-200">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           
           {/* Info Side */}
           <div>
-            <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Connect</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-10">Get in Touch</h3>
-            <p className="text-gray-400 text-lg mb-12 font-normal font-sans leading-relaxed">
+            <span className="text-[10px] font-bold tracking-label uppercase text-llsa-accent mb-6 block">Connect</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">Get in Touch</h2>
+            <p className="text-gray-500 text-lg mb-16 font-light leading-relaxed max-w-md">
               Contact the LLSA co-presidents if you have any questions about membership, events, or partnerships.
             </p>
 
             <div className="space-y-12">
-              <div className="flex items-start space-x-6 group">
-                <div className="mt-1 text-white/40 group-hover:text-white transition-colors duration-500"><Mail size={18} /></div>
-                <div>
-                  <h4 className="text-[10px] font-sans font-semibold uppercase tracking-label text-white/40 mb-2">Email Co-Presidents</h4>
-                  <a href="mailto:mcgeorge.llsa@gmail.com" className="text-lg font-sans font-normal text-white border-b border-transparent hover:border-white transition-all pb-0.5">
+              <div className="flex items-start group">
+                <div className="mt-1 text-llsa-accent p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform"><Mail size={20} /></div>
+                <div className="ml-6">
+                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Email Co-Presidents</h4>
+                  <a href="mailto:mcgeorge.llsa@gmail.com" className="text-lg font-bold text-llsa-charcoal border-b-2 border-llsa-accent/20 hover:border-llsa-accent transition-all pb-1">
                     mcgeorge.llsa@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-6">
-                <div className="mt-1 text-white/40"><MapPin size={18} /></div>
-                <div>
-                  <h4 className="text-[10px] font-sans font-semibold uppercase tracking-label text-white/40 mb-2">Location</h4>
-                  <p className="text-white/80 font-sans font-normal text-sm leading-relaxed">
+              <div className="flex items-start">
+                <div className="mt-1 text-llsa-accent p-3 bg-white rounded-full shadow-sm"><MapPin size={20} /></div>
+                <div className="ml-6">
+                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Location</h4>
+                  <p className="text-llsa-charcoal font-medium text-sm leading-relaxed">
                     University of the Pacific<br/>
                     McGeorge School of Law<br/>
                     Sacramento, CA
@@ -42,28 +42,30 @@ const Contact: React.FC = () => {
 
           {/* Social Side */}
           <div className="flex flex-col justify-center">
-            <div className="p-10 border border-white/10 bg-white/[0.02]">
-              <h3 className="text-[10px] font-sans font-semibold uppercase tracking-label mb-8 text-white/60">Stay Updated</h3>
-              <p className="text-sm text-gray-500 mb-10 leading-relaxed font-sans font-normal">
-                Follow our official accounts for real-time news and community highlights.
+            <div className="p-12 bg-white shadow-xl rounded-card border border-gray-100">
+              <h3 className="text-[11px] font-bold uppercase tracking-widest mb-8 text-llsa-accent">Stay Updated</h3>
+              <p className="text-sm text-gray-500 mb-12 leading-relaxed font-light">
+                Follow our official accounts for real-time news and community highlights from our students and alumni.
               </p>
               
-              <div className="flex space-x-4">
+              <div className="flex space-x-6">
                 <a 
                   href="https://www.instagram.com/mcg_llsa/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 border border-white/10 hover:border-white hover:bg-white hover:text-black transition-all duration-500"
+                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-llsa-accent hover:text-llsa-accent transition-all duration-500 rounded-md"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={24} className="mb-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Instagram</span>
                 </a>
                 <a 
                   href="https://www.linkedin.com/groups/14525631/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 border border-white/10 hover:border-white hover:bg-white hover:text-black transition-all duration-500"
+                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-llsa-accent hover:text-llsa-accent transition-all duration-500 rounded-md"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={24} className="mb-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">LinkedIn</span>
                 </a>
               </div>
             </div>

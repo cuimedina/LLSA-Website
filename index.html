@@ -6,10 +6,10 @@
     <title>LLSA | McGeorge School of Law</title>
     <meta name="description" content="Latinx Law Students Association at University of the Pacific McGeorge School of Law" />
     
-    <!-- Google Fonts: Strict weight selection -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,12 +22,18 @@
               'sans': ['"Inter"', 'sans-serif'],
             },
             colors: {
-              'llsa-black': '#0a0a0a',
-              'llsa-gray': '#f4f4f5',
+              'llsa-black': '#000000',
+              'llsa-charcoal': '#1A1A1A',
+              'llsa-accent': '#800000', // Rich Burgundy
+              'llsa-offwhite': '#FAFAFA',
+              'llsa-gray': '#F5F5F5',
             },
             letterSpacing: {
-              'editorial': '0.15em',
+              'editorial': '0.05em',
               'label': '0.2em',
+            },
+            borderRadius: {
+              'card': '12px',
             }
           }
         }
@@ -36,72 +42,46 @@
     <style>
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 100px;
+        scroll-padding-top: 80px;
       }
-
-      ::-webkit-scrollbar {
-        width: 8px;
+      body {
+        background-color: #FFFFFF;
+        color: #1A1A1A;
       }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+      .placeholder-image {
+        background-color: #F5F5F5;
+        border: 2px dashed #D1D5DB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9CA3AF;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      
       @keyframes fade-in-up {
         0% { opacity: 0; transform: translateY(20px); }
         100% { opacity: 1; transform: translateY(0); }
       }
-
-      @keyframes fade-in {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-
-      @keyframes scale-up {
-        0% { opacity: 0; transform: scale(0.95); }
-        100% { opacity: 1; transform: scale(1); }
-      }
-
       .animate-fade-in-up {
         animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
       }
-
-      .animate-fade-in {
-        animation: fade-in 0.6s ease-out both;
-      }
-
-      .animate-scale-up {
-        animation: scale-up 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .animate-fade-in-up, .animate-fade-in, .animate-scale-up {
-          animation: none !important;
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom": "https://esm.sh/react-dom@^19.2.3",
-    "react-dom/client": "https://esm.sh/react-dom@19.2.3/client",
-    "lucide-react": "https://esm.sh/lucide-react@0.462.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
-</head>
-  <body class="bg-white text-llsa-black antialiased font-sans">
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom": "https://esm.sh/react-dom@^19.2.3",
+        "react-dom/client": "https://esm.sh/react-dom@19.2.3/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.462.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/"
+      }
+    }
+    </script>
+  </head>
+  <body class="antialiased font-sans">
     <div id="root"></div>
   </body>
 </html>

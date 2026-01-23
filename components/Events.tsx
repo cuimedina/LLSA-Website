@@ -1,80 +1,61 @@
 import React from 'react';
-import { Calendar, Users, Mic2, Briefcase, ExternalLink } from 'lucide-react';
+import { Calendar, Users, Mic2, Briefcase, ArrowRight } from 'lucide-react';
 
 const Events: React.FC = () => {
   return (
-    <section id="events" className="py-24 md:py-32 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+    <section id="events" className="py-24 md:py-32 bg-llsa-offwhite text-llsa-charcoal">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
-          {/* Featured Event Flyer */}
-          <div className="w-full lg:w-5/12">
-            <div className="relative group max-w-[500px] mx-auto lg:mx-0">
-              <div className="absolute -inset-2 bg-white/5 blur-xl group-hover:bg-white/10 transition-all rounded-lg"></div>
-              <img 
-                src="https://storage.googleapis.com/llsa-website-images/HNBALLSAStudentMixer.jpg" 
-                alt="LLSA Bay Area Mixer Flyer" 
-                className="relative z-10 w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.01]"
-              />
-              <div className="mt-8 flex flex-col items-center lg:items-start">
-                <span className="text-[9px] font-sans font-semibold uppercase tracking-label text-white/40">Upcoming Programming</span>
-                <p className="text-xl font-sans font-normal mt-2 text-white mb-6">Community & Academic Events</p>
-                
+          {/* Featured Event Card */}
+          <div className="lg:col-span-5">
+            <div className="bg-white p-4 shadow-xl rounded-card border border-gray-100 group">
+              <div className="relative overflow-hidden rounded-md mb-8">
+                <img 
+                  src="https://storage.googleapis.com/llsa-website-images/HNBALLSAStudentMixer.jpg" 
+                  alt="LLSA Student Mixer" 
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="px-4 pb-4">
+                <span className="text-[10px] font-bold uppercase tracking-label text-llsa-accent mb-2 block">Featured Programming</span>
+                <h3 className="text-2xl font-serif font-bold mb-6">Annual Inter-Collegiate Mixer</h3>
                 <a 
                   href="https://docs.google.com/forms/d/16xMWcRFfQRvxICAvrzn-YKZG_B5JTJg063m1wrfprgI/edit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-20 inline-flex items-center space-x-3 px-10 py-4 bg-white text-black text-[10px] font-sans font-semibold uppercase tracking-label hover:bg-gray-200 transition-all group/btn shadow-xl"
+                  className="w-full inline-flex items-center justify-center py-4 bg-llsa-accent text-white text-[11px] font-bold uppercase tracking-label hover:bg-llsa-charcoal transition-all"
                 >
-                  <span>RSVP Now</span>
-                  <ExternalLink size={12} className="group-hover/btn:translate-x-1 transition-transform" />
+                  RSVP for Events
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Event Content */}
-          <div className="w-full lg:w-7/12">
-            <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Engagement</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-10">Events & Outreach</h3>
-            <p className="text-gray-400 text-lg mb-12 font-normal font-sans leading-relaxed">
-              We host a variety of social, academic, and professional development events throughout the academic year.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
-              <div className="flex items-start space-x-5">
-                <Users className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Networking Mixers</h4>
-                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Connect with McGeorge alumni and legal professionals in Sacramento.</p>
+          {/* Event Types Content */}
+          <div className="lg:col-span-7 py-8">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">Events & Outreach</h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-16">
+              {[
+                { icon: <Users size={20} />, title: "Networking Mixers", desc: "Connect with McGeorge alumni and legal professionals in Sacramento." },
+                { icon: <Mic2 size={20} />, title: "Diversity Panels", desc: "Engagement on legal issues impacting the Latinx community." },
+                { icon: <Calendar size={20} />, title: "Mentorship Programs", desc: "Peer-to-peer mentorship for 1L and 2L students." },
+                { icon: <Briefcase size={20} />, title: "Professional Development", desc: "Workshops on OCI, resumes, and career paths." }
+              ].map((item, i) => (
+                <div key={i} className="flex space-x-5 group">
+                  <div className="text-llsa-accent mt-1">{item.icon}</div>
+                  <div>
+                    <h4 className="font-bold text-[12px] uppercase tracking-widest mb-2 text-llsa-charcoal group-hover:text-llsa-accent transition-colors">{item.title}</h4>
+                    <p className="text-sm text-gray-500 leading-relaxed font-light">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-5">
-                <Mic2 className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Diversity Panels</h4>
-                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Engagement on legal issues impacting the Latinx community.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-5">
-                <Calendar className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Mentorship Programs</h4>
-                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Peer-to-peer mentorship for 1L and 2L students.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-5">
-                <Briefcase className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Professional Development</h4>
-                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Workshops on OCI, resumes, and career paths.</p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div className="p-8 border-l border-white/20 bg-white/[0.02]">
-              <p className="text-sm text-gray-400 leading-relaxed font-sans font-normal">
-                Stay updated via <strong>The Docket</strong> and <strong>The WRIT</strong> for specific event dates, locations, and registration links.
+            <div className="p-8 border-l-2 border-llsa-accent bg-white shadow-sm rounded-r-md">
+              <p className="text-sm text-gray-600 leading-relaxed font-medium italic">
+                Check <span className="text-llsa-accent font-bold">The Docket</span> and <span className="text-llsa-accent font-bold">The WRIT</span> for official event schedules and registration details.
               </p>
             </div>
           </div>
