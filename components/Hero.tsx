@@ -6,7 +6,6 @@ const Hero: React.FC = () => {
       {/* Background - Minimalist Dark Theme */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900" />
-        {/* Subtle abstract glow for depth */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[600px] md:h-[600px] bg-white/[0.03] rounded-full blur-[100px] pointer-events-none" />
       </div>
 
@@ -15,16 +14,13 @@ const Hero: React.FC = () => {
         
         {/* Logo Lockup */}
         <div className="animate-fade-in-up flex flex-col items-center justify-center">
-           
-           {/* Logo Image - Clean restoration of original sleek look */}
            <div className="mb-12 mx-auto transition-all duration-500 transform hover:scale-105">
              <img 
-               src="./LLSAWhiteLogo.png" 
+               src="LLSAWhiteLogo.png" 
                alt="Latinx Law Students Association Logo" 
                className="w-64 sm:w-80 md:w-96 lg:w-[32rem] h-auto object-contain mx-auto drop-shadow-2xl"
              />
            </div>
-
         </div>
 
         <div className="mt-8 sm:mt-12">

@@ -25,18 +25,11 @@ const Navbar: React.FC = () => {
     e.preventDefault();
     const element = document.querySelector(id);
     if (element) {
-      // Close mobile menu first if open
       if (isOpen) setIsOpen(false);
-      
-      // Calculate position with offset for fixed header
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
@@ -59,9 +52,9 @@ const Navbar: React.FC = () => {
           {/* Logo / Brand */}
           <div className="flex-shrink-0 flex items-center space-x-4">
             <img 
-              src="./LLSAWhiteLogo.png"
+              src={isScrolled ? "LLSA_logo.PNG" : "LLSAWhiteLogo.png"}
               alt="LLSA Logo"
-              className={`h-12 w-auto object-contain transition-all duration-300 ${isScrolled ? 'brightness-0' : ''}`}
+              className="h-12 w-auto object-contain transition-all duration-300"
             />
             <a 
               href="#" 
@@ -130,7 +123,7 @@ const Navbar: React.FC = () => {
           >
             <X size={24} />
           </button>
-
+        <img src="LLSA_logo.PNG" alt="LLSA Logo" className="h-24 w-auto mb-4" />
         {navLinks.map((link) => (
           <a
             key={link.name}

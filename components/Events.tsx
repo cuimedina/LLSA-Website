@@ -21,11 +21,11 @@ const Events: React.FC = () => {
         <div className="mb-20">
           <div className="bg-white shadow-xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row group">
             
-            {/* Image Side - Restored sleek full-bleed look */}
+            {/* Image Side */}
             <div className="lg:w-1/2 relative min-h-[400px] md:min-h-[500px] overflow-hidden bg-gray-100">
               <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <img 
-                src="./HNBALLSAStudentMixer.jpg" 
+                src="HNBALLSAStudentMixer.jpg" 
                 alt="LLSA Bay Area Mixer Flyer" 
                 className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -170,6 +170,4 @@ const Events: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Events;
+};export default Events;
