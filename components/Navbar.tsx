@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="flex items-center group">
           <img 
-            src="/images/LLSA_logo.png" 
+            src="/images/LLSA_logo.PNG" 
             alt="LLSA Logo" 
             className="h-[40px] md:h-[48px] w-auto object-contain transition-transform duration-500 group-hover:scale-105 brightness-0 invert" 
           />
