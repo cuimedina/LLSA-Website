@@ -1,60 +1,71 @@
 import React from 'react';
-import { Calendar, MapPin, Users, Mic2, ExternalLink } from 'lucide-react';
+import { Calendar, Users, Mic2, Briefcase } from 'lucide-react';
 
 const Events: React.FC = () => {
   return (
-    <section id="events" className="py-24 bg-llsa-gray text-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h2 className="text-4xl font-serif font-bold mb-4">Events & Programming</h2>
-          <div className="w-12 h-1 bg-black mb-6"></div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Featured Flyer Card */}
-          <div className="lg:col-span-2 bg-white shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
-            <div className="md:w-1/2 relative h-64 md:h-auto">
+    <section id="events" className="py-24 md:py-32 bg-black text-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+          
+          {/* Featured Event Flyer */}
+          <div className="w-full lg:w-5/12">
+            <div className="relative group max-w-[500px] mx-auto lg:mx-0">
+              <div className="absolute -inset-2 bg-white/5 blur-xl group-hover:bg-white/10 transition-all rounded-lg"></div>
               <img 
-                src="HNBALLSAStudentMixer.jpg" 
-                alt="Mixer Flyer" 
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                src="/images/HNBALLSAStudentMixer.jpg" 
+                alt="LLSA Bay Area Mixer Flyer" 
+                className="relative z-10 w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.01]"
               />
-            </div>
-            <div className="md:w-1/2 p-8 flex flex-col justify-center">
-              <div className="mb-4">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Upcoming Signature Event</span>
-                <h3 className="text-2xl font-serif font-bold mt-2">Bay Area Student Mixer</h3>
+              <div className="mt-8 text-center lg:text-left">
+                <span className="text-[9px] font-sans font-semibold uppercase tracking-label text-white/40">Featured Event</span>
+                <p className="text-xl font-sans font-normal mt-2 text-white">Annual Inter-Collegiate Mixer</p>
               </div>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center text-sm text-gray-600">
-                  <Calendar size={16} className="mr-2" /> Jan 31, 2026 • 6:00 PM
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <MapPin size={16} className="mr-2" /> Legacy Bar North Beach, SF
-                </div>
-              </div>
-              <a 
-                href="https://docs.google.com/forms/d/16xMWcRFfQRvxICAvrzn-YKZG_B5JTJg063m1wrfprgI/viewform" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-black text-white text-[10px] font-bold uppercase tracking-widest hover:bg-zinc-800 transition-colors"
-              >
-                RSVP Now <ExternalLink size={12} className="ml-2" />
-              </a>
             </div>
           </div>
 
-          {/* Secondary Events / Info */}
-          <div className="space-y-8">
-            <div className="bg-white p-8 border border-gray-100 shadow-sm">
-              <Users className="mb-4 text-gray-400" size={24} />
-              <h4 className="text-lg font-serif font-bold mb-2">Professional Mixers</h4>
-              <p className="text-sm text-gray-500 leading-relaxed">Monthly gatherings to connect students with practicing attorneys and alumni.</p>
+          {/* Event Content */}
+          <div className="w-full lg:w-7/12">
+            <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Programming</h2>
+            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-10">Events & Outreach</h3>
+            <p className="text-gray-400 text-lg mb-12 font-normal font-sans leading-relaxed">
+              We host a variety of social, academic, and professional development events throughout the academic year.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
+              <div className="flex items-start space-x-5">
+                <Users className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Networking Mixers</h4>
+                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Connect with McGeorge alumni and legal professionals in Sacramento.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-5">
+                <Mic2 className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Diversity Panels</h4>
+                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Engagement on legal issues impacting the Latinx community.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-5">
+                <Calendar className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Mentorship Programs</h4>
+                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Peer-to-peer mentorship for 1L and 2L students.</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-5">
+                <Briefcase className="w-5 h-5 text-white/60 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-sans font-semibold text-[10px] uppercase tracking-label mb-2">Professional Development</h4>
+                  <p className="text-xs text-gray-500 font-sans font-normal leading-relaxed">Workshops on OCI, resumes, and career paths.</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-8 border border-gray-100 shadow-sm">
-              <Mic2 className="mb-4 text-gray-400" size={24} />
-              <h4 className="text-lg font-serif font-bold mb-2">Panel Discussions</h4>
-              <p className="text-sm text-gray-500 leading-relaxed">Educational sessions on law school success and career pathways.</p>
+
+            <div className="p-8 border-l border-white/20 bg-white/[0.02]">
+              <p className="text-sm text-gray-400 leading-relaxed font-sans font-normal">
+                Check <strong>The Docket</strong> and <strong>The WRIT</strong> for official event schedules and registration details.
+              </p>
             </div>
           </div>
         </div>

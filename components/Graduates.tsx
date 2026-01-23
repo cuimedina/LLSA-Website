@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Linkedin, X, GraduationCap, User, Briefcase, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Graduate {
@@ -46,138 +46,6 @@ const graduatesData: Graduate[] = [
     bio: 'Elena is dedicated to criminal defense reform. She volunteered extensively with the Public Defender\'s office and aims to work in public interest law in the Central Valley.',
     currentPosition: 'Public Defender Fellow',
     linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '4',
-    firstName: 'David',
-    lastName: 'Silva',
-    graduationYear: '2026',
-    image: '',
-    concentration: 'Environmental Law',
-    bio: 'David combines his passion for policy and the environment. He currently serves as the LLSA Treasurer and is researching water rights in California.',
-    currentPosition: 'Seeking Clerkship',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '5',
-    firstName: 'Sofia',
-    lastName: 'Lopez',
-    graduationYear: '2025',
-    image: '',
-    concentration: 'Intellectual Property',
-    bio: 'Sofia has a background in engineering and is pursuing patent law. She founded the IP Law Society student chapter and mentors 1L students.',
-    currentPosition: 'IP Specialist',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '6',
-    firstName: 'Alejandro',
-    lastName: 'Torres',
-    graduationYear: '2024',
-    image: '',
-    concentration: 'Family Law',
-    bio: 'Alejandro is committed to serving families in crisis. He worked in the campus legal clinic providing pro bono services and is a certified mediator.',
-    currentPosition: 'Family Law Practitioner',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '7',
-    firstName: 'Gabriela',
-    lastName: 'Hernandez',
-    graduationYear: '2026',
-    image: '',
-    concentration: 'Civil Rights',
-    bio: 'Gabriela is a rising star in civil rights litigation. She has been active in community organizing for a decade and brings that grassroots energy to her legal work.',
-    currentPosition: 'Law Clerk',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '8',
-    firstName: 'Mateo',
-    lastName: 'Vasquez',
-    graduationYear: '2025',
-    image: '',
-    concentration: 'Labor Law',
-    bio: 'Mateo is passionate about worker rights and fair wages. He previously worked in labor relations and is now specializing in union representation.',
-    currentPosition: 'Labor Relations Intern',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '9',
-    firstName: 'Julian',
-    lastName: 'Ortega',
-    graduationYear: '2025',
-    image: '',
-    concentration: 'Litigation',
-    bio: 'Julian is an aspiring litigator with a focus on consumer protection. He participated in the honors mock trial program and serves as an editor for the Law Review.',
-    currentPosition: 'Legal Extern',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '10',
-    firstName: 'Rosa',
-    lastName: 'Mendoza',
-    graduationYear: '2024',
-    image: '',
-    concentration: 'Public Interest',
-    bio: 'Rosa is dedicated to serving underrepresented communities. She spent her summers working with legal aid societies and hopes to reform housing policy in Sacramento.',
-    currentPosition: 'Housing Rights Advocate',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '11',
-    firstName: 'Fernando',
-    lastName: 'Ramirez',
-    graduationYear: '2026',
-    image: '',
-    concentration: 'Tax Law',
-    bio: 'Fernando is exploring the complex world of tax law and its impact on small businesses. He enjoys volunteering at tax clinics and helping families navigate financial regulations.',
-    currentPosition: 'VITA Volunteer',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '12',
-    firstName: 'Lucia',
-    lastName: 'Blanco',
-    graduationYear: '2025',
-    image: '',
-    concentration: 'Human Rights',
-    bio: 'Lucia has a deep commitment to international human rights. She has interned with global NGOs and plans to work on international asylum cases after graduation.',
-    currentPosition: 'International Law Fellow',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '13',
-    firstName: 'Ricardo',
-    lastName: 'Mendez',
-    graduationYear: '2024',
-    image: '',
-    concentration: 'Real Estate Law',
-    bio: 'Ricardo is interested in urban development and sustainable housing. He has a background in architecture and aims to bridge the gap between design and legal compliance.',
-    currentPosition: 'Real Estate Associate',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '14',
-    firstName: 'Valentina',
-    lastName: 'Ruiz',
-    graduationYear: '2026',
-    image: '',
-    concentration: 'Sports Law',
-    bio: 'Valentina is pursuing her dream of working in sports management and law. She is active in the Entertainment and Sports Law Society and has secured a summer internship with a professional league.',
-    currentPosition: 'Sports Legal Intern',
-    linkedInUrl: 'https://linkedin.com'
-  },
-  {
-    id: '15',
-    firstName: 'Andres',
-    lastName: 'Navarro',
-    graduationYear: '2025',
-    image: '',
-    concentration: 'Constitutional Law',
-    bio: 'Andres is a scholar of constitutional theory. He aims to clerk for the appellate court and eventually teach law. He currently serves as a research assistant for constitutional history.',
-    currentPosition: 'Graduate Research Assistant',
-    linkedInUrl: 'https://linkedin.com'
   }
 ];
 
@@ -187,18 +55,16 @@ const Graduates: React.FC = () => {
   const [initialCount, setInitialCount] = useState(6);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Sorting alphabetically by last name
   const sortedGraduates = useMemo(() => {
     return [...graduatesData].sort((a, b) => a.lastName.localeCompare(b.lastName));
   }, []);
 
-  // Handle responsive initial counts
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width < 768) setInitialCount(2); // Mobile
-      else if (width < 1200) setInitialCount(4); // Tablet
-      else setInitialCount(6); // Desktop
+      if (width < 768) setInitialCount(2);
+      else if (width < 1200) setInitialCount(4);
+      else setInitialCount(6);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -232,10 +98,9 @@ const Graduates: React.FC = () => {
     <section id="graduates" className="py-24 md:py-32 bg-[#fafafa] text-black border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 tracking-tight">Clase del 2026</h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-gray-600 font-normal max-w-2xl mx-auto mb-10 font-sans">
             The next generation of legal leaders para la comunidad.
           </p>
 
@@ -244,17 +109,16 @@ const Graduates: React.FC = () => {
               href="https://forms.google.com/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-12 py-5 bg-black text-white text-base font-bold uppercase tracking-widest hover:bg-gray-800 transition-all shadow-xl hover:scale-105 active:scale-95"
+              className="inline-block px-12 py-5 bg-black text-white text-[10px] font-sans font-semibold uppercase tracking-label hover:bg-gray-800 transition-all shadow-xl hover:scale-105 active:scale-95"
             >
               Submit Profile
             </a>
-            <p className="mt-4 text-xs text-gray-400 font-medium uppercase tracking-widest">
+            <p className="mt-4 text-[9px] text-gray-400 font-semibold uppercase tracking-label font-sans">
               Graduating soon? Share your story with us.
             </p>
           </div>
         </div>
 
-        {/* Grid Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {visibleGraduates.map((grad, index) => (
             <div 
@@ -276,40 +140,26 @@ const Graduates: React.FC = () => {
                   </div>
                 )}
                 
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                 
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 text-center">
                   <h3 className="text-white text-2xl font-serif font-bold tracking-wide">
                     {grad.firstName} {grad.lastName}
                   </h3>
-                  <p className="text-white/70 text-xs uppercase tracking-widest mt-2 font-bold">
+                  <p className="text-white/70 text-[9px] uppercase tracking-label mt-2 font-semibold font-sans">
                     Class of {grad.graduationYear}
                   </p>
                   
                   <div className="mt-4 overflow-hidden h-0 group-hover:h-8 transition-all duration-500 opacity-0 group-hover:opacity-100">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-white border-b border-white/50 pb-1">View Profile</span>
+                    <span className="text-[8px] uppercase tracking-label text-white border-b border-white/50 pb-1 font-sans">View Profile</span>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Load More Button */}
-        {!isExpanded && sortedGraduates.length > initialCount && (
-          <div className="flex justify-center mt-16">
-            <button
-              onClick={() => setIsExpanded(true)}
-              className="px-10 py-4 border-2 border-black text-black text-sm font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all duration-300 active:scale-95"
-            >
-              View All {sortedGraduates.length} Graduates
-            </button>
-          </div>
-        )}
       </div>
 
-      {/* Detail Modal */}
       {selectedGraduate && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div 
@@ -319,34 +169,13 @@ const Graduates: React.FC = () => {
           
           <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto md:overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scale-up">
             
-            {/* Close Button */}
             <button 
               onClick={() => setSelectedId(null)}
               className="absolute top-4 right-4 md:top-6 md:right-6 z-30 p-2 bg-white/20 hover:bg-black/10 rounded-full transition-colors"
-              aria-label="Close modal"
             >
               <X className="w-6 h-6 text-black" />
             </button>
 
-            {/* Navigation Buttons (Desktop) */}
-            <div className="hidden md:block">
-              <button 
-                onClick={(e) => { e.stopPropagation(); navigate('prev'); }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/5 hover:bg-black/10 rounded-full transition-all"
-                aria-label="Previous profile"
-              >
-                <ChevronLeft className="w-8 h-8 text-black" />
-              </button>
-              <button 
-                onClick={(e) => { e.stopPropagation(); navigate('next'); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/5 hover:bg-black/10 rounded-full transition-all"
-                aria-label="Next profile"
-              >
-                <ChevronRight className="w-8 h-8 text-black" />
-              </button>
-            </div>
-
-            {/* Left/Top Content: Image */}
             <div className="w-full md:w-2/5 bg-gray-100 min-h-[300px] md:min-h-full">
               {selectedGraduate.image ? (
                 <img src={selectedGraduate.image} alt="" className="w-full h-full object-cover" />
@@ -357,22 +186,21 @@ const Graduates: React.FC = () => {
               )}
             </div>
 
-            {/* Right/Bottom Content: Info */}
             <div className="w-full md:w-3/5 p-8 md:p-16 flex flex-col justify-center bg-white relative">
-              <span className="inline-block px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-6 w-fit">
+              <span className="inline-block px-3 py-1 bg-gray-100 text-[9px] font-sans font-semibold uppercase tracking-label text-gray-500 mb-6 w-fit">
                 Class of {selectedGraduate.graduationYear}
               </span>
               
-              <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight">
+              <h3 className="text-3xl md:text-5xl font-serif font-bold mb-4 leading-tight">
                 {selectedGraduate.firstName}<br className="hidden md:block" /> {selectedGraduate.lastName}
               </h3>
               
               <div className="flex items-center text-gray-500 mb-8 border-b border-gray-100 pb-4">
                 <GraduationCap className="w-5 h-5 mr-3 flex-shrink-0" />
-                <span className="font-medium italic">{selectedGraduate.concentration}</span>
+                <span className="font-sans font-normal text-sm">{selectedGraduate.concentration}</span>
               </div>
               
-              <p className="text-gray-700 leading-relaxed mb-10 text-base md:text-lg">
+              <p className="text-gray-700 leading-relaxed mb-10 text-base font-sans font-normal">
                 {selectedGraduate.bio}
               </p>
               
@@ -380,7 +208,7 @@ const Graduates: React.FC = () => {
                 {selectedGraduate.currentPosition && (
                   <div className="flex items-start">
                     <Briefcase className="w-5 h-5 mr-3 text-gray-400 mt-1" />
-                    <p className="text-black font-semibold text-sm uppercase tracking-wide">
+                    <p className="text-black font-semibold text-[10px] uppercase tracking-editorial font-sans">
                       {selectedGraduate.currentPosition}
                     </p>
                   </div>
@@ -391,28 +219,12 @@ const Graduates: React.FC = () => {
                     href={selectedGraduate.linkedInUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold text-xs uppercase tracking-[0.2em] transition-colors"
+                    className="inline-flex items-center text-black hover:text-gray-600 font-sans font-semibold text-[9px] uppercase tracking-label transition-colors border-b border-black pb-1"
                   >
-                    <Linkedin className="w-5 h-5 mr-2" />
+                    <Linkedin className="w-4 h-4 mr-2" />
                     Connect on LinkedIn
                   </a>
                 )}
-              </div>
-
-              {/* Mobile Navigation Arrows */}
-              <div className="flex justify-between mt-10 pt-6 border-t border-gray-100 md:hidden">
-                <button 
-                  onClick={() => navigate('prev')}
-                  className="flex items-center text-xs font-bold uppercase tracking-widest text-gray-500"
-                >
-                  <ChevronLeft className="w-4 h-4 mr-1" /> Prev
-                </button>
-                <button 
-                  onClick={() => navigate('next')}
-                  className="flex items-center text-xs font-bold uppercase tracking-widest text-gray-500"
-                >
-                  Next <ChevronRight className="w-4 h-4 ml-1" />
-                </button>
               </div>
             </div>
           </div>

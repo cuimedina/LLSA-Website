@@ -2,33 +2,33 @@ import React from 'react';
 
 const Donate: React.FC = () => {
   return (
-    <section id="donate" className="py-20 md:py-28 bg-black text-white relative overflow-hidden">
-      {/* Abstract Background Decoration */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gray-800 rounded-full mix-blend-overlay filter blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
-        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Support Our Cause</h2>
-        <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
-          Your contribution directly supports student scholarships, event programming, and community outreach initiatives. Help us empower the next generation of Latinx legal professionals.
+    <section id="donate" className="py-24 md:py-32 bg-black text-white text-center border-t border-white/5">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Contribute</h2>
+        <h3 className="text-4xl md:text-5xl font-serif font-bold mb-8">Support Our Cause</h3>
+        <p className="text-lg md:text-xl text-gray-400 font-normal mb-14 max-w-2xl mx-auto leading-relaxed font-sans">
+          Your contribution directly supports student scholarships, event programming, and community outreach initiatives. 
+          Help us empower the next generation of Latinx legal professionals.
         </p>
 
-        <div className="bg-white/5 backdrop-blur-sm p-8 md:p-16 rounded-lg border border-white/10 flex flex-col items-center justify-center">
-          
+        <div className="flex flex-col items-center">
           <a 
             href="https://crowdfunding.pacific.edu/campaigns/latinx-law-students-association-llsa-fund"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full md:w-auto px-12 py-5 bg-white text-black text-xl font-bold uppercase tracking-widest hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/20"
+            className="inline-block px-12 md:px-20 py-6 bg-white text-black text-[10px] font-sans font-semibold uppercase tracking-label hover:bg-gray-200 transition-all transform hover:scale-105 active:scale-95 shadow-2xl"
           >
             Donate Now
           </a>
           
-          <p className="mt-8 text-sm text-gray-400 font-light max-w-lg">
+          <p className="mt-12 text-[9px] text-gray-500 font-sans font-semibold uppercase tracking-label max-w-lg">
             You will be redirected to the University of the Pacific's official crowdfunding page to securely complete your donation.
           </p>
-
-          <p className="mt-4 text-xs text-gray-600 uppercase tracking-wider">
-            *All donations are tax-deductible.
+          
+          <div className="mt-6 w-8 h-px bg-white/10 mx-auto"></div>
+          
+          <p className="mt-6 text-[9px] text-gray-600 uppercase tracking-label font-sans font-light">
+            *ALL DONATIONS ARE TAX-DEDUCTIBLE
           </p>
         </div>
       </div>
