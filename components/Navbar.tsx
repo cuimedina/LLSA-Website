@@ -40,15 +40,15 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-[100] transition-all duration-500 ${isScrolled ? 'bg-black/95 backdrop-blur-md py-4 shadow-xl border-b border-white/10' : 'bg-transparent py-8'}`}>
+    <nav className={`fixed w-full z-[100] transition-all duration-500 ${isScrolled ? 'bg-black/95 backdrop-blur-md py-3 shadow-xl border-b border-white/10' : 'bg-transparent py-4 md:py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="flex items-center group">
           <img 
-            src="/images/LLSA_logo.PNG" 
+            src="https://storage.googleapis.com/llsa-website-images/LLSALogo.png" 
             alt="LLSA Logo" 
-            className="h-[40px] md:h-[48px] w-auto object-contain transition-transform duration-500 group-hover:scale-105 brightness-0 invert" 
+            className="h-[36px] md:h-[44px] w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
           />
-          <span className="hidden sm:block ml-4 text-base font-serif font-bold tracking-widest text-white uppercase">LLSA</span>
+          <span className="hidden sm:block ml-4 text-sm font-serif font-bold tracking-widest text-white uppercase">LLSA</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
           <a
             href="#donate"
             onClick={(e) => handleScrollTo(e, '#donate')}
-            className="px-6 py-2 border border-white text-white text-[10px] uppercase tracking-label font-semibold hover:bg-white hover:text-black transition-all font-sans"
+            className="px-6 py-2 border border-white/30 text-white text-[10px] uppercase tracking-label font-semibold hover:bg-white hover:text-black hover:border-white transition-all font-sans"
           >
             Support
           </a>
@@ -81,9 +81,9 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       <div className={`fixed inset-0 bg-black z-[90] transition-transform duration-700 ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden flex flex-col items-center justify-center space-y-10`}>
         <img 
-          src="/images/LLSA_logo.png" 
+          src="https://storage.googleapis.com/llsa-website-images/LLSALogo.png" 
           alt="Logo" 
-          className="h-16 w-auto mb-4 opacity-50 brightness-0 invert"
+          className="h-16 w-auto mb-4"
         />
         {navLinks.map((link) => (
           <a

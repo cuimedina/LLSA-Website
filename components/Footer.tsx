@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-center">
           <img 
-            src="/images/LLSAWhiteLogo.png" 
+            src="https://storage.googleapis.com/llsa-website-images/LLSALogo.png" 
             alt="LLSA White Logo" 
             className="h-10 w-auto mb-8 opacity-60" 
           />

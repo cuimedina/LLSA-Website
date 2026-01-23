@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Mic2, Briefcase } from 'lucide-react';
+import { Calendar, Users, Mic2, Briefcase, ExternalLink } from 'lucide-react';
 
 const Events: React.FC = () => {
   return (
@@ -12,20 +12,30 @@ const Events: React.FC = () => {
             <div className="relative group max-w-[500px] mx-auto lg:mx-0">
               <div className="absolute -inset-2 bg-white/5 blur-xl group-hover:bg-white/10 transition-all rounded-lg"></div>
               <img 
-                src="/images/HNBALLSAStudentMixer.jpg" 
+                src="https://storage.googleapis.com/llsa-website-images/HNBALLSAStudentMixer.jpg" 
                 alt="LLSA Bay Area Mixer Flyer" 
                 className="relative z-10 w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.01]"
               />
-              <div className="mt-8 text-center lg:text-left">
-                <span className="text-[9px] font-sans font-semibold uppercase tracking-label text-white/40">Featured Event</span>
-                <p className="text-xl font-sans font-normal mt-2 text-white">Annual Inter-Collegiate Mixer</p>
+              <div className="mt-8 flex flex-col items-center lg:items-start">
+                <span className="text-[9px] font-sans font-semibold uppercase tracking-label text-white/40">Upcoming Programming</span>
+                <p className="text-xl font-sans font-normal mt-2 text-white mb-6">Community & Academic Events</p>
+                
+                <a 
+                  href="https://docs.google.com/forms/d/16xMWcRFfQRvxICAvrzn-YKZG_B5JTJg063m1wrfprgI/edit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-20 inline-flex items-center space-x-3 px-10 py-4 bg-white text-black text-[10px] font-sans font-semibold uppercase tracking-label hover:bg-gray-200 transition-all group/btn shadow-xl"
+                >
+                  <span>RSVP Now</span>
+                  <ExternalLink size={12} className="group-hover/btn:translate-x-1 transition-transform" />
+                </a>
               </div>
             </div>
           </div>
 
           {/* Event Content */}
           <div className="w-full lg:w-7/12">
-            <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Programming</h2>
+            <h2 className="text-[10px] font-sans font-semibold tracking-label uppercase text-white/40 mb-6">Engagement</h2>
             <h3 className="text-4xl md:text-5xl font-serif font-bold mb-10">Events & Outreach</h3>
             <p className="text-gray-400 text-lg mb-12 font-normal font-sans leading-relaxed">
               We host a variety of social, academic, and professional development events throughout the academic year.
@@ -64,7 +74,7 @@ const Events: React.FC = () => {
 
             <div className="p-8 border-l border-white/20 bg-white/[0.02]">
               <p className="text-sm text-gray-400 leading-relaxed font-sans font-normal">
-                Check <strong>The Docket</strong> and <strong>The WRIT</strong> for official event schedules and registration details.
+                Stay updated via <strong>The Docket</strong> and <strong>The WRIT</strong> for specific event dates, locations, and registration links.
               </p>
             </div>
           </div>

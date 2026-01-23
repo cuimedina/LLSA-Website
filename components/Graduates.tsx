@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Linkedin, X, GraduationCap, User, Briefcase, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Linkedin, X, GraduationCap, User, Briefcase } from 'lucide-react';
 
 interface Graduate {
   id: string;
