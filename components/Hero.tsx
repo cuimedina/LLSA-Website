@@ -3,8 +3,8 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white">
-      {/* Content Overlay - Pure black background as requested */}
+    <section id="hero" className="hero relative h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+      {/* Content Overlay - Pure black background */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center animate-fade-in-up">
         {/* Logo centered without any background boxes or containers */}
         <div className="mb-10 md:mb-12">
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         
         {/* Subtitle in lighter gray (#A1A1A1) */}
         <p className="text-[#A1A1A1] text-sm md:text-base lg:text-lg font-sans font-light max-w-2xl mx-auto leading-relaxed">
-          Advancing academic success, professional excellence, and cultural awareness at McGeorge School of Law
+          Training legal leaders para la comunidad
         </p>
 
         {/* Action Button moved slightly closer */}

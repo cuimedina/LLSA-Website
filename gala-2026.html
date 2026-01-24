@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLSA | McGeorge School of Law</title>
-    <meta name="description" content="Official website for the Latinx Law Students Association at McGeorge School of Law. Advancing academic and professional excellence." />
+    <title>LLSA Gala 2026 | Latinx Law Students Association</title>
+    <meta name="description" content="Join LLSA for the 2026 Gala celebrating nuestra comunidad at McGeorge School of Law. Stay tuned for ticket information and event details." />
     
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="LLSA Gala 2026 - Coming Soon" />
+    <meta property="og:description" content="An evening celebrating nuestra comunidad" />
+    <meta property="og:image" content="https://storage.googleapis.com/llsa-website-images/LLSALogo.png" />
+    <meta property="og:url" content="https://llsapacific.org/gala-2026" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,44 +30,18 @@
             colors: {
               'llsa-black': '#000000',
               'llsa-charcoal': '#1A1A1A',
-              'llsa-accent': '#000000', // Changed from Burgundy to Black
               'llsa-offwhite': '#FAFAFA',
               'llsa-gray': '#F5F5F5',
-              'llsa-border': '#D1D5DB',
-              'llsa-muted': '#A1A1A1',
             },
             letterSpacing: {
               'editorial': '0.05em',
               'label': '0.2em',
-            },
-            borderRadius: {
-              'card': '12px',
             }
           }
         }
       }
     </script>
     <style>
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-      }
-      body {
-        background-color: #FFFFFF;
-        color: #1A1A1A;
-      }
-      .placeholder-image {
-        background-color: #F5F5F5;
-        border: 2px dashed #D1D5DB;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #9CA3AF;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-weight: 600;
-      }
       @keyframes fade-in-up {
         0% { opacity: 0; transform: translateY(20px); }
         100% { opacity: 1; transform: translateY(0); }
@@ -84,7 +64,7 @@
     </script>
     <script type="module" src="index.tsx"></script>
   </head>
-  <body class="antialiased font-sans">
+  <body class="antialiased font-sans bg-black">
     <div id="root"></div>
   </body>
 </html>

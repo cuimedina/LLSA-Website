@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
           
           {/* Info Side */}
           <div>
-            <span className="text-[10px] font-bold tracking-label uppercase text-llsa-accent mb-6 block">Connect</span>
+            <span className="text-[10px] font-bold tracking-label uppercase text-black mb-6 block">Connect</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">Get in Touch</h2>
             <p className="text-gray-500 text-lg mb-16 font-light leading-relaxed max-w-md">
               Contact the LLSA co-presidents if you have any questions about membership, events, or partnerships.
@@ -17,20 +17,20 @@ const Contact: React.FC = () => {
 
             <div className="space-y-12">
               <div className="flex items-start group">
-                <div className="mt-1 text-llsa-accent p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform"><Mail size={20} /></div>
+                <div className="mt-1 text-white p-3 bg-black rounded-full shadow-sm group-hover:scale-110 transition-transform"><Mail size={20} /></div>
                 <div className="ml-6">
                   <h4 className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Email Co-Presidents</h4>
-                  <a href="mailto:mcgeorge.llsa@gmail.com" className="text-lg font-bold text-llsa-charcoal border-b-2 border-llsa-accent/20 hover:border-llsa-accent transition-all pb-1">
+                  <a href="mailto:mcgeorge.llsa@gmail.com" className="text-lg font-bold text-black border-b border-black/20 hover:border-black transition-all pb-1">
                     mcgeorge.llsa@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="mt-1 text-llsa-accent p-3 bg-white rounded-full shadow-sm"><MapPin size={20} /></div>
+                <div className="mt-1 text-white p-3 bg-black rounded-full shadow-sm"><MapPin size={20} /></div>
                 <div className="ml-6">
                   <h4 className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Location</h4>
-                  <p className="text-llsa-charcoal font-medium text-sm leading-relaxed">
+                  <p className="text-black font-medium text-sm leading-relaxed">
                     University of the Pacific<br/>
                     McGeorge School of Law<br/>
                     Sacramento, CA
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
           {/* Social Side */}
           <div className="flex flex-col justify-center">
             <div className="p-12 bg-white shadow-xl rounded-card border border-gray-100">
-              <h3 className="text-[11px] font-bold uppercase tracking-widest mb-8 text-llsa-accent">Stay Updated</h3>
+              <h3 className="text-[11px] font-bold uppercase tracking-widest mb-8 text-black">Stay Updated</h3>
               <p className="text-sm text-gray-500 mb-12 leading-relaxed font-light">
                 Follow our official accounts for real-time news and community highlights from our students and alumni.
               </p>
@@ -53,19 +53,19 @@ const Contact: React.FC = () => {
                   href="https://www.instagram.com/mcg_llsa/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-llsa-accent hover:text-llsa-accent transition-all duration-500 rounded-md"
+                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-black hover:text-black transition-all duration-500 rounded-md"
                 >
                   <Instagram size={24} className="mb-4" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Instagram</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Instagram</span>
                 </a>
                 <a 
                   href="https://www.linkedin.com/groups/14525631/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-llsa-accent hover:text-llsa-accent transition-all duration-500 rounded-md"
+                  className="flex-1 flex flex-col items-center p-6 border border-gray-100 hover:border-black hover:text-black transition-all duration-500 rounded-md"
                 >
                   <Linkedin size={24} className="mb-4" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">LinkedIn</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">LinkedIn</span>
                 </a>
               </div>
             </div>
@@ -75,6 +75,4 @@ const Contact: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+};export default Contact;
